@@ -5,11 +5,11 @@ CPP  = g++.exe
 CC   = gcc.exe
 WINDRES = windres.exe
 RES  = 
-OBJ  = dllmain.o FileIO.o $(RES)
-LINKOBJ  = dllmain.o FileIO.o $(RES)
-LIBS =  -L"D:/Dev-Cpp/lib" --no-export-all-symbols --add-stdcall-alias 
-INCS =  -I"D:/Dev-Cpp/include" 
-CXXINCS =  -I"D:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"D:/Dev-Cpp/include/c++/3.4.2/backward"  -I"D:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"D:/Dev-Cpp/include/c++/3.4.2"  -I"D:/Dev-Cpp/include" 
+OBJ  = dllmain.o FileIO.o test.o $(RES)
+LINKOBJ  = dllmain.o FileIO.o test.o $(RES)
+LIBS =  -L"E:/programs/Dev-Cpp/lib" --no-export-all-symbols --add-stdcall-alias 
+INCS =  -I"E:/programs/Dev-Cpp/include" 
+CXXINCS =  -I"E:/programs/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"E:/programs/Dev-Cpp/include/c++/3.4.2/backward"  -I"E:/programs/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"E:/programs/Dev-Cpp/include/c++/3.4.2"  -I"E:/programs/Dev-Cpp/include" 
 BIN  = UsefulDLL.dll
 CXXFLAGS = $(CXXINCS) -DBUILDING_DLL=1 
 CFLAGS = $(INCS) -DBUILDING_DLL=1 
@@ -35,3 +35,6 @@ dllmain.o: dllmain.cpp
 
 FileIO.o: FileIO.cpp
 	$(CPP) -c FileIO.cpp -o FileIO.o $(CXXFLAGS)
+
+test.o: test.cpp
+	$(CPP) -c test.cpp -o test.o $(CXXFLAGS)
