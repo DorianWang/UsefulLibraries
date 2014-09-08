@@ -13,6 +13,8 @@
 #define MAX_BUFFER 4096
 #define MAX_DATA_LENGTH 256
 
+# define DLLIMPORT __declspec (dllexport)
+
 //#include "typeChanger.h"
 
 
@@ -20,7 +22,7 @@ namespace MyWin32DLL
 {
 
 
-class FileIO
+class DLLIMPORT FileIO
 {
 
 public:

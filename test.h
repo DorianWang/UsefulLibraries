@@ -1,18 +1,20 @@
 
+# define DLLIMPORT __declspec (dllexport)
+
 
 namespace MyWin32DLL
 {
    
    
-   class testClass
+   class DLLIMPORT testClass
    {
       
       private:
          int varone;
       public:
-         __declspec(dllexport) testClass();//constructor
-         __declspec(dllexport) void Setvar(int val);
-         __declspec(dllexport) int Getvar();
+         testClass();//constructor
+         void Setvar(int val);
+         int Getvar();
       
       
    };

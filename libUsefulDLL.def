@@ -1,4 +1,4 @@
-; dlltool --base-file C:\Users\smurf\AppData\Local\Temp/cca02076.base --output-exp UsefulDLL.exp --dllname UsefulDLL.dll --output-def libUsefulDLL.def --no-export-all-symbols --add-stdcall-alias --exclude-symbol=DllMainCRTStartup@12 --def C:\Users\smurf\AppData\Local\Temp/cca02076.def --output-lib libUsefulDLL.a
+; dlltool --base-file C:\Users\S19971~1\AppData\Local\Temp/cca00560.base --output-exp UsefulDLL.exp --dllname UsefulDLL.dll --output-def libUsefulDLL.def --no-export-all-symbols --add-stdcall-alias --exclude-symbol=DllMainCRTStartup@12 --def C:\Users\S19971~1\AppData\Local\Temp/cca00560.def --output-lib libUsefulDLL.a
 EXPORTS
 ;	MyWin32DLL::testClass::Getvar()
 	_ZN10MyWin32DLL9testClass6GetvarEv @ 1
