@@ -7,6 +7,12 @@
 # define DLLIMPORT __declspec (dllimport)
 #endif /* Not BUILDING_DLL */
 
+#include "FileIO.h"
+#include "test.h"
+
+
+namespace MyWin32DLL
+{
 
 class DLLIMPORT DllClass
 {
@@ -18,6 +24,9 @@ class DLLIMPORT DllClass
 
 };
 
+
+
+}
 
 #endif /* _DLL_H_ */
 

@@ -13,7 +13,9 @@
 #define MAX_BUFFER 4096
 #define MAX_DATA_LENGTH 256
 
+#ifndef DLLIMPORT
 # define DLLIMPORT __declspec (dllexport)
+#endif
 
 //#include "typeChanger.h"
 

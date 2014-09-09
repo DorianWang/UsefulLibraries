@@ -1,7 +1,6 @@
-
+#ifndef DLLIMPORT
 # define DLLIMPORT __declspec (dllexport)
-
-
+#endif
 namespace MyWin32DLL
 {
    

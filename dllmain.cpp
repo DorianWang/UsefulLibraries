@@ -2,6 +2,9 @@
 #include "dll.h"
 #include <windows.h>
 
+namespace MyWin32DLL
+{
+
 DllClass::DllClass()
 {
 
@@ -35,4 +38,6 @@ BOOL APIENTRY DllMain (HINSTANCE hInst     /* Library instance handle. */ ,
 
     /* Returns TRUE on success, FALSE on failure */
     return TRUE;
+}
+
 }

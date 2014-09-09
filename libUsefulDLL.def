@@ -1,22 +1,22 @@
-; dlltool --base-file C:\Users\S19971~1\AppData\Local\Temp/cca00560.base --output-exp UsefulDLL.exp --dllname UsefulDLL.dll --output-def libUsefulDLL.def --no-export-all-symbols --add-stdcall-alias --exclude-symbol=DllMainCRTStartup@12 --def C:\Users\S19971~1\AppData\Local\Temp/cca00560.def --output-lib libUsefulDLL.a
+; dlltool --base-file C:\Users\smurf\AppData\Local\Temp/cca07404.base --output-exp UsefulDLL.exp --dllname UsefulDLL.dll --output-def libUsefulDLL.def --no-export-all-symbols --add-stdcall-alias --exclude-symbol=DllMainCRTStartup@12 --def C:\Users\smurf\AppData\Local\Temp/cca07404.def --output-lib libUsefulDLL.a
 EXPORTS
+;	MyWin32DLL::DllClass::DllClass()
+	_ZN10MyWin32DLL8DllClassC1Ev @ 1
+;	MyWin32DLL::DllClass::DllClass()
+	_ZN10MyWin32DLL8DllClassC2Ev @ 2
+;	MyWin32DLL::DllClass::~DllClass()
+	_ZN10MyWin32DLL8DllClassD0Ev @ 3
+;	MyWin32DLL::DllClass::~DllClass()
+	_ZN10MyWin32DLL8DllClassD1Ev @ 4
+;	MyWin32DLL::DllClass::~DllClass()
+	_ZN10MyWin32DLL8DllClassD2Ev @ 5
 ;	MyWin32DLL::testClass::Getvar()
-	_ZN10MyWin32DLL9testClass6GetvarEv @ 1
+	_ZN10MyWin32DLL9testClass6GetvarEv @ 6
 ;	MyWin32DLL::testClass::Setvar(int)
-	_ZN10MyWin32DLL9testClass6SetvarEi @ 2
+	_ZN10MyWin32DLL9testClass6SetvarEi @ 7
 ;	MyWin32DLL::testClass::testClass()
-	_ZN10MyWin32DLL9testClassC1Ev @ 3
+	_ZN10MyWin32DLL9testClassC1Ev @ 8
 ;	MyWin32DLL::testClass::testClass()
-	_ZN10MyWin32DLL9testClassC2Ev @ 4
-;	DllClass::DllClass()
-	_ZN8DllClassC1Ev @ 5
-;	DllClass::DllClass()
-	_ZN8DllClassC2Ev @ 6
-;	DllClass::~DllClass()
-	_ZN8DllClassD0Ev @ 7
-;	DllClass::~DllClass()
-	_ZN8DllClassD1Ev @ 8
-;	DllClass::~DllClass()
-	_ZN8DllClassD2Ev @ 9
-;	vtable for DllClass
-	_ZTV8DllClass @ 10 DATA
+	_ZN10MyWin32DLL9testClassC2Ev @ 9
+;	vtable for MyWin32DLL::DllClass
+	_ZTVN10MyWin32DLL8DllClassE @ 10 DATA
