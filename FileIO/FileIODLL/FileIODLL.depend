@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1410367746 source:d:\doriancode\usefuldll\fileio.cpp
+	"FileIO.h"
+
+1410367746 d:\doriancode\usefuldll\fileio.h
+	<string>
+	<fstream>
+	<iostream>
+	<sstream>
+	<cstdarg>
+	<cstdlib>
+	<vector>
+
