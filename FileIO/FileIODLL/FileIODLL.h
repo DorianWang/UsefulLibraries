@@ -44,10 +44,10 @@ void DLL_EXPORT SomeFunction(const LPCSTR sometext);
 
 
 //http://msdn.microsoft.com/en-ca/library/ms235636.aspx
-namespace MathFuncs
+namespace FileIOName
 {
 
-class FileIO
+class DLL_EXPORT FileIO
 {
    public:
    //Variables

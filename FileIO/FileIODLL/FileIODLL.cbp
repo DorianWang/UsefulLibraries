@@ -40,8 +40,6 @@
 				</Linker>
 			</Target>
 		</Build>
-		<Unit filename="../../FileIO.cpp" />
-		<Unit filename="../../FileIO.h" />
 		<Unit filename="FileIODLL.cpp" />
 		<Unit filename="FileIODLL.h" />
 		<Extensions>

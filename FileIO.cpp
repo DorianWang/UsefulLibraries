@@ -8,10 +8,10 @@ FileIO::FileIO()
 {
    lineCounter = 0;
    dataCounter = 0;
-   isOpen = false;   
+   isOpen = false;
    dataInLineBuffer = false;
 };
-                 
+
 FileIO::~FileIO()
 {
    closeFile(true);
@@ -30,7 +30,7 @@ unsigned long long FileIO::getFileLength()
       }
       goStart(1);
    }
-   
+
    if (isBinary){
       std::streampos fsize = 0;
       goEnd(1);
@@ -73,15 +73,15 @@ int FileIO::textOpenFile(std::string filePath, bool isFirstTime)
       fileConstructor();
       return 1;
    }
-   
+
    myfile.open(filePath.c_str(), std::ios::out | std::ios::in);
-   
+
    if (myfile.is_open()){
       isBinary=false;
       fileConstructor();
       return 1;
    }
-    
+
 return 0;//file is not open
 }
 
@@ -97,15 +97,15 @@ int FileIO::dataOpenFile(std::string filePath, bool isFirstTime)
       fileConstructor();
       return 1;
    }
-   
+
    myfile.open(filePath.c_str(), std::ios::out | std::ios::in);
-   
+
    if (myfile.is_open()){
       isBinary=true;
       fileConstructor();
       return 1;
    }
-    
+
 return 0;//file is not open
 }
 
@@ -118,10 +118,10 @@ int FileIO::goStart(int isRead)
       return 1;
    }
    if (isRead == 0){
-      myfile.seekp(0, std::ios::beg);   
+      myfile.seekp(0, std::ios::beg);
       return 1;
    }
-   
+
    return 0;
 }
 
@@ -133,10 +133,10 @@ int FileIO::goEnd(int isRead)
       return 1;
    }
    if (isRead == 0){
-      myfile.seekp(0, std::ios::end);   
+      myfile.seekp(0, std::ios::end);
       return 1;
    }
-   
+
    return 0;
 }
 
@@ -144,22 +144,22 @@ int FileIO::goPos(int isRead, int position)
 {
 
    if (position<0||position>fileLength){
-      return 0;   
+      return 0;
    }
-   
+
    if (isRead > 0){
       myfile.seekg(0, std::ios_base::beg);
-      myfile.seekg(position); 
+      myfile.seekg(position);
       return 1;
    }
    if (isRead == 0){
       myfile.seekp(0, std::ios_base::beg);
-      myfile.seekp(position);   
+      myfile.seekp(position);
       return 1;
    }
-   
+
    return 0;
-    
+
 }
 
 //Reads one line from the file, and returns it.
@@ -168,14 +168,14 @@ int FileIO::readLine(std::string *output)
    if (!myfile.good()){
       return 0;
    }
-   
+
    std::string input;
-   
+
    getline( myfile, input );
    if (input.length()==0){
       return 1;
    }
-   
+
    *output = input;
    return 2;
 }
@@ -186,9 +186,9 @@ int FileIO::readWholeLine(std::string *output)
    if (!myfile.good()){
       return 0;
    }
-   
-   std::string input;
-   
+
+   std::string input;https://www.youtube.com/watch?v=KJMXZ2T3t3E
+
    getline( myfile, input );
    if (input.length()==0){
       return 1;//Empty line...
@@ -199,13 +199,13 @@ int FileIO::readWholeLine(std::string *output)
    return 2;
 }
 
-// It is limited to MAX_BUFFER bytes per pull. 
+// It is limited to MAX_BUFFER bytes per pull.
 // Multiple executions may be required to get all data.
 // http://stackoverflow.com/questions
 // /1579719/variable-number-of-parameters-in-function-in-c
 int FileIO::readData(int dataLength, int arrayLength, int* errorNum, ...)
 {
-//For dataLength, 
+//For dataLength,
 //this affects how many bytes are taken from the file per arrayLength.
 
 //returns 0 for failure, else 1
@@ -222,16 +222,16 @@ int FileIO::readData(int dataLength, int arrayLength, int* errorNum, ...)
       delete [] buffer;
       return 0;
    }
-   
+
    va_list ap;
    va_start(ap, errorNum);//Gets the pointer to the function parameter list
 
    output = va_arg(ap, char*);//This allows for modification, and pointer arithmetic
    va_end(ap);//closes list, important...
-   
+
    if (output == NULL){
-      std::cout<<"???"<<std::endl;  
-      delete [] buffer; 
+      std::cout<<"???"<<std::endl;
+      delete [] buffer;
       *errorNum = -1;//Input error
       return 0;
    }
@@ -243,12 +243,12 @@ int FileIO::readData(int dataLength, int arrayLength, int* errorNum, ...)
       *errorNum = -1;//Input error
       return 0;
    }
-   
+
    //goStart(1);//Temporary
    //read bytes, chance to fail...
    myfile.read(buffer, totalBytesToGet);
    int bytesRead = myfile.gcount();
-   
+
    if (bytesRead!=totalBytesToGet){
       //goStart(1);//Goes to start, temporary.
       myfile.clear();
@@ -258,9 +258,9 @@ int FileIO::readData(int dataLength, int arrayLength, int* errorNum, ...)
       *errorNum = -2;//Read error, not enough bytes to get.
       return -1 * bytesRead;//Bad stuff, note that all bad returns are less than one.
    }
-   
+
    //if (myfile.eof()&&myfile.fail()) return 0; //hit end of file...
-   
+
    for (int i=0;i<(arrayLength*bytesToGet);i++){
       *(output+i) = buffer[i];
    }
@@ -274,12 +274,12 @@ int FileIO::readData(int dataLength, int arrayLength, int* errorNum, ...)
 //Puts a newline after the output
 int FileIO::writeLine(std::string output)
 {
-    
+
    if (myfile.is_open()){
       myfile << output << std::endl;
       return 1;
    }
-    
+
 return 0;
 }
 
@@ -306,9 +306,9 @@ void FileIO::bufferLines(std::string input)
    //temp = lineBuffer[lineCounter];//.back();
    lineBufferBuffer+=input;
    if (lineBuffer.capacity()<=lineCounter+2){
-      lineBuffer.reserve(lineCounter+(lineCounter/2)+1);      
+      lineBuffer.reserve(lineCounter+(lineCounter/2)+1);
    }
-   
+
    lineBuffer[lineCounter] = lineBufferBuffer;//push_back(input);[lineCounter]+=input;
    lineCounter++;
    dataInLineBuffer=false;
@@ -329,7 +329,7 @@ void FileIO::clearBuffer()
 int FileIO::clearBuffer(int line)
 {
    if (line>lineCounter||line<0){
-      return 0;   
+      return 0;
    }
    lineBuffer[line].clear();
    lineCounter = line;
@@ -344,7 +344,7 @@ void FileIO::writeBuffer()
 {
    for (int i=0;i<lineCounter;i++){
       myfile << lineBuffer[i] << std::endl;
-   }     
+   }
    if (dataInLineBuffer){
       myfile << lineBufferBuffer;
    }
@@ -364,7 +364,7 @@ void FileIO::writeBuffer(bool clearData)
 
 //Does not increment the counter, and instead adds to the currently stored line.
 void FileIO::bufferAddition(std::string input)
-{ 
+{
    //lineBuffer[lineCounter]+=input;
    lineBufferBuffer+=input;
    dataInLineBuffer = true;
@@ -390,7 +390,7 @@ if (dataBuffer.size()!=0){
    temp = writeData(sizeof(char), dataBuffer.size(), &(dataBuffer[0]));
    if (temp>0){
       clearDataBuffer();
-      return temp;   
+      return temp;
    }
 }
 return 0;
@@ -423,13 +423,13 @@ void FileIO::clearDataBuffer(int dummy)
 
 
 
-//Takes data already 
+//Takes data already
 int FileIO::writeDataToFile(const char* data, int length)
 {
    if (myfile.is_open()){
       myfile.write(data, length); return !myfile.fail();
    }
-return 0; 
+return 0;
 }
 
 //Takes any array (including single value pointers) and writes it to the file.
@@ -437,7 +437,7 @@ return 0;
 int FileIO::writeData(int dataLength, int arrayLength, ...){
 
 if (dataLength<=0||arrayLength<=0){
-   return 0;   
+   return 0;
 }
 
 va_list ap;
@@ -462,7 +462,7 @@ bool FileIO::checkIfOpen()
       isOpen = true;
       return isOpen;
    }
-   
+
    isOpen = false;
    return isOpen;
 }
@@ -473,18 +473,18 @@ int FileIO::closeFile()
    if (isOpen){
       closeFile(true);
       return 1;
-   }  
+   }
    return 0;
-   
+
 }
 
 //Closes the file, clears the buffer, etc...
 void FileIO::closeFile(bool asdf)
 {
    lineCounter = 0;
-   dataCounter = 0; 
+   dataCounter = 0;
    dataInLineBuffer = false;
-   myfile.close(); 
+   myfile.close();
    clearBuffer();
    isOpen = false;
 }

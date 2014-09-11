@@ -1,24 +1,52 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="FileIODLL.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="FileIODLL.h" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="773" topLine="0" />
+			<Cursor1 position="957" topLine="36" />
 		</Cursor>
 	</File>
-	<File name="FileIODLL.h" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="FileIODLL.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="649" topLine="10" />
+			<Cursor1 position="802" topLine="24" />
 		</Cursor>
-	</File>
-	<File name="..\..\FileIO.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2603" topLine="96" />
-		</Cursor>
-	</File>
-	<File name="..\..\FileIO.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="48" topLine="0" />
-		</Cursor>
+		<Folding>
+			<Collapse line="570" />
+			<Collapse line="584" />
+			<Collapse line="608" />
+			<Collapse line="621" />
+			<Collapse line="632" />
+			<Collapse line="647" />
+			<Collapse line="662" />
+			<Collapse line="685" />
+			<Collapse line="703" />
+			<Collapse line="725" />
+			<Collapse line="739" />
+			<Collapse line="750" />
+			<Collapse line="759" />
+			<Collapse line="770" />
+			<Collapse line="782" />
+			<Collapse line="794" />
+			<Collapse line="796" />
+			<Collapse line="806" />
+			<Collapse line="816" />
+			<Collapse line="826" />
+			<Collapse line="838" />
+			<Collapse line="848" />
+			<Collapse line="862" />
+			<Collapse line="874" />
+			<Collapse line="875" />
+			<Collapse line="885" />
+			<Collapse line="897" />
+			<Collapse line="905" />
+			<Collapse line="919" />
+			<Collapse line="929" />
+			<Collapse line="936" />
+			<Collapse line="944" />
+			<Collapse line="953" />
+			<Collapse line="976" />
+			<Collapse line="988" />
+			<Collapse line="999" />
+		</Folding>
 	</File>
 </CodeBlocks_layout_file>
