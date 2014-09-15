@@ -70,42 +70,6 @@ unsigned long long FileIO::getFileLength()
 returnInt = fileLength; return returnInt;
 }
 
-voFileIO::FileIO()
-{
-   lineCounter = 0;
-   dataCounter = 0;
-   isOpen = false;
-   dataInLineBuffer = false;
-};
-
-FileIO::~FileIO()
-{
-   closeFile(true);
-};
-
-
-//Goes to the end of the file, checks the length, and then goes to the start.
-unsigned long long FileIO::getFileLength()
-{
-   fileLength = 0; unsigned long long returnInt;
-   if(!isBinary){//Not a binary file, therefore it is a text file
-      goStart(1);
-      std::string line;
-      while (std::getline(myfile, line)){
-         fileLength = fileLength + line.length() + 1;//Length of string plus null terminator
-      }
-      goStart(1);
-   }
-
-   if (isBinary){
-      std::streampos fsize = 0;
-      goEnd(1);
-      fileLength = myfile.tellg() - fsize;
-      goStart(1);
-   }
-returnInt = fileLength; return returnInt;
-}
-
 void FileIO::fileConstructor()
 {
    lineCounter = 0;
@@ -253,7 +217,7 @@ int FileIO::readWholeLine(std::string *output)
       return 0;
    }
 
-   std::string input;https://www.youtube.com/watch?v=KJMXZ2T3t3E
+   std::string input; //https://www.youtube.com/watch?v=KJMXZ2T3t3E
 
    getline( myfile, input );
    if (input.length()==0){
@@ -282,7 +246,7 @@ int FileIO::readData(int dataLength, int arrayLength, int* errorNum, ...)
    char* output; //void * temp;
    int bytesToGet=dataLength;
    int totalBytesToGet=0;
-   int j = 0;
+   //int j = 0;
    *errorNum = 0;
    if (dataLength>=MAX_DATA_LENGTH||dataLength<=-1){
       delete [] buffer;
@@ -559,7 +523,10 @@ void FileIO::closeFile(bool asdf)
 
 }
 
-id FileIO::fileConstructor()
+//{
+
+/*
+FileIO::fileConstructor()
 {
    lineCounter = 0;
    dataCounter = 0;
@@ -1008,6 +975,6 @@ void FileIO::closeFile(bool asdf)
 
 
 
+*/
 
-
-}
+//}

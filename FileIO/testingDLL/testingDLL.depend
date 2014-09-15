@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1410807162 source:d:\doriancode\usefuldll\fileio\testingdll\main.cpp
+	<iostream>
+	"D:\DorianCode\UsefulDLL\FileIO\FileIODLL\FileIODLL.h"
+
+1410462604 d:\doriancode\usefuldll\fileio\fileiodll\fileiodll.h
+	<windows.h>
+	<string>
+	<fstream>
+	<iostream>
+	<sstream>
+	<cstdarg>
+	<cstdlib>
+	<vector>
+

@@ -11,3 +11,16 @@
 	<cstdlib>
 	<vector>
 
+1410804605 source:d:\doriancode\usefuldll\fileio\fileiodll\fileiodll.cpp
+	"FileIODLL.h"
+
+1410462604 d:\doriancode\usefuldll\fileio\fileiodll\fileiodll.h
+	<windows.h>
+	<string>
+	<fstream>
+	<iostream>
+	<sstream>
+	<cstdarg>
+	<cstdlib>
+	<vector>
+
