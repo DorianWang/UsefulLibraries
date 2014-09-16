@@ -1,0 +1,7 @@
+EXPORTS
+    DllMain@12 @1
+    SomeFunction @2
+    _ZN9KeyIOName8Keypress16get_current_codeEi @3
+    _ZN9KeyIOName8Keypress8get_codeESs @4
+    _ZN9KeyIOName8Keypress8get_codeEi @5
+    _ZN9KeyIOName8Keypress8get_codeEv @6
