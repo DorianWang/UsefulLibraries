@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1410902771 source:d:\dorian's programs\usefuldll\fileio\keyio\keyiodll.cpp
+	"KeyIODLL.h"
+	<iostream>
+	<cstdlib>
+	"conio.h"
+	"windows.h"
+
+1410902771 d:\dorian's programs\usefuldll\fileio\keyio\keyiodll.h
+	<windows.h>
+	<iostream>
+

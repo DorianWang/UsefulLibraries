@@ -13,3 +13,22 @@
 	<cstdlib>
 	<vector>
 
+1411005037 source:d:\dorian's programs\usefuldll\fileio\testingdll\main.cpp
+	<iostream>
+	"FileIODLL.h"
+	"KeyIODLL.h"
+
+1410476096 d:\dorian's programs\usefuldll\fileio\testingdll\fileiodll.h
+	<windows.h>
+	<string>
+	<fstream>
+	<iostream>
+	<sstream>
+	<cstdarg>
+	<cstdlib>
+	<vector>
+
+1410902771 d:\dorian's programs\usefuldll\fileio\testingdll\keyiodll.h
+	<windows.h>
+	<iostream>
+
