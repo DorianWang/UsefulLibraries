@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1385320472 source:d:\doriancode\usefuldll\alldlls\testforian\main.cpp
+
+1411578314 source:d:\doriancode\usefuldll\alldlls\testforian\fileiomac.cpp
+	"FileIOMac.h"
+
+1411578032 d:\doriancode\usefuldll\alldlls\testforian\fileiomac.h
+	<string>
+	<fstream>
+	<iostream>
+	<sstream>
+	<cstdarg>
+	<cstdlib>
+	<vector>
+
