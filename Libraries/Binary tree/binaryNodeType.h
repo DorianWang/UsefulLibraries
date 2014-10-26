@@ -68,6 +68,4 @@ template <class E> void binaryNodeType<E>::setData (E input)
 
 
 
-
-
 #endif // BINARYLEAFTYPE_H_INCLUDED

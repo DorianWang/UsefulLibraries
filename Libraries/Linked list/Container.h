@@ -308,8 +308,6 @@ template <class D> int linkedList<D>::deleteNode(unsigned int nodeNum, unsigned 
 
    }
 
-
-
 }
 
 //Deletes all nodes with an equal D value. Returns the number of objects deleted.
