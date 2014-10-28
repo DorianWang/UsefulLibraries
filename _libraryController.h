@@ -6,7 +6,8 @@
 
 #ifndef FILEIO_H
 
-#include "\Libraries\FileIO\FileIO.h"
+//#include <Libraries/FileIO/FileIO.h>
+#include "FileIO.h"
 
 #endif
 
@@ -17,7 +18,7 @@
 
 #ifndef BINARY_TREE_H
 
-#include "\Libraries\Binary tree\binaryTree.h"
+#include "binaryTree.h"
 
 #endif
 
@@ -29,7 +30,7 @@
 
 #ifndef TREE_TYPE_H
 
-#include "\Libraries\itemTree\treeType.h"
+#include "treeType.h"
 
 #endif
 
@@ -41,7 +42,7 @@
 
 #ifndef KEYS_H
 
-#include "\Libraries\KeyIO\keys.h"
+#include "keys.h"
 
 #endif
 
@@ -52,7 +53,7 @@
 
 #ifndef CONTAINER_H
 
-#include "\Libraries\Linked list\container.h"
+#include "container.h"
 
 #endif
 
@@ -64,14 +65,23 @@
 
 #ifndef CONSOLEOPTIONS_H_INCLUDED
 
-#include "\Libraries\Windows console stuff\ConsoleOptions.h"
+#include "ConsoleOptions.h"
 
 #endif
 
 #endif // INCLUDE_CONSOLE_OPTIONS
 
 
+#ifdef INCLUDE_UTILITIES
 
+#ifndef USEFUL_HEADERS_H
+
+#include "UsefulHeaders.h"
+#include "functionChecker.h"
+
+#endif
+
+#endif // INCLUDE_UTILITIES
 
 
 
